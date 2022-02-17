@@ -9,7 +9,7 @@ date: "Department of Statistics <br/> University of Michigan // 18 Feb 2022"
 
 ## Outline of the talk
 
-1. What do we need simulations for?
+1. Genomes, and simulations
 2. The tree sequence
 3. Applications
 
@@ -181,9 +181,9 @@ What can we learn about its structure? history? biology?
 
 ##
 
-Fast simulation
+- Fast simulation of genomes
 
-Fast statistic computation
+- Fast computation of summary statistics
 
 ## Wish list:
 
@@ -256,11 +256,7 @@ from millions of individuals.
 
 by Ben Haller and Philipp Messer
 
-- a forwards simulator
-- arbitary life cycles
-- continuous geography and local interactions
-- quantitative traits
-- anything is possible
+an individual-based, scriptable forwards simulator
 
 :::: {.caption}
 ![Ben Haller](figs/ben-haller.jpg)
