@@ -25,6 +25,10 @@ date: "Department of Statistics <br/> University of Michigan // 18 Feb 2022"
 > - encode the basic *mechanisms* of life
 > - reflect past *history* and *process*
 
+. . .
+
+![Genotype matrix from Kreitman 1983](figs/kreitman-1983.png)
+
 ## 
 
 Your two copies of the genome
@@ -42,9 +46,6 @@ and your eight great-grandparents
 
 and your sixteen great-great-grandparents
 
-. . .
-
-... see where this is going?
 
 
 ## Genealogical ancestors
@@ -81,7 +82,7 @@ In a well-mixed population of size $N$,
 :::
 ::::::
 
-## You and your great${}^{k-1}$-grand parents
+## You and your great${}^{k-2}$-grand parents
 
 The number of $k^\text{th}$ *genetic* ancestors
 grows *linearly* with $k$.
@@ -115,37 +116,6 @@ from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-
 from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
 :::
 
-## 
-
-::: {.centered}
-![](figs/gcbias/family_tree.png){width=60%}
-:::
-
-::: {.caption}
-from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
-:::
-
-## 
-
-::: {.centered}
-![](figs/gcbias/family_tree_w_trans.png){width=60%}
-:::
-
-::: {.caption}
-from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
-:::
-
-## 
-
-::: {.centered}
-![](figs/gcbias/family_tree_w_trans_2.png){width=60%}
-:::
-
-::: {.caption}
-from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
-:::
-
-#
 
 ##
 
@@ -177,19 +147,19 @@ What can we learn about its structure? history? biology?
 4. How do organisms disperse across the landscape? *(dispersal maps)*
 
 
-## Inverse problems
+##
 
 ![](figs/modeling_reality.png)
 
-## Inverse problems
+##
 
 ![](figs/modeling_model_parameters.png)
 
-## Inverse problems
+##
 
 ![](figs/modeling_model_parameters_inverse.png)
 
-## Inverse problems
+##
 
 ![](figs/modeling_parameters_inverse_computer.png)
 
@@ -203,39 +173,17 @@ What can we learn about its structure? history? biology?
 - bespoke confirmatory simulations
 - optimization of one or two parameters
     <!-- *(if between-simulation noise is small)* -->
-- machine learning predictors (e.g., random forests)
 - Approximate Bayesian Computation (ABC)
 - deep learning
 
 
 # What do we need
 
-<!--
-## Ok, then: selection.
+##
 
-:::: {.columns}
-:::::::: {.column width=50%}
+Fast simulation
 
-
-To test theories and fit models, we need *simulations* with realistic
-
-1. population sizes,
-2. ecology,
-2. genomes,
-3. selective pressures,
-4. histories, and
-5. geography.
-
-
-::::
-:::::::: {.column width=50%}
-
-![map of mimulus](figs/aurantiacus/just_map.png)
-
-::::
-::::::::
-
--->
+Fast statistic computation
 
 ## Wish list:
 
@@ -627,16 +575,6 @@ $O(N + T + M)$ things
 
 ![genotypes and a tree](figs/ts_ex/tree_sequence_genotype_and_tree.png){width=60%}
 
-## Fast genotype statistics, too!
-
-::: {.centered}
-![efficiency of treestat computation](figs/treestats/benchmarks_without_copy_longer_genome.png){width=70%}
-:::
-
-::: {.caption}
-from Ralph, Thornton and Kelleher 2019, [Efficiently summarizing relationships in large samples](https://doi.org/10.1534/genetics.120.303253)
-:::
-
 
 
 # Summarizing genomes and genealogies
@@ -651,14 +589,6 @@ from Ralph, Thornton and Kelleher 2019, [Efficiently summarizing relationships i
 from [R., Thornton and Kelleher 2019, *Efficiently summarizing relationships in large samples*](https://www.biorxiv.org/content/10.1101/779132v1?rss=1), bioRxiv
 :::
 
-##
-
-**What do genotypes tell us about the genealogies?**
-
-
-::: {.caption}
-from [R., Thornton and Kelleher 2019, *Efficiently summarizing relationships in large samples*](https://www.biorxiv.org/content/10.1101/779132v1?rss=1), bioRxiv
-:::
 
 
 ## Summaries of genotypes and genealogies
@@ -852,6 +782,10 @@ It is *not* clear this is a good idea.
 But, with a few tricks...
 
 
+##
+
+The key idea: simplify
+
 
 ## A 100x speedup!
 
@@ -892,135 +826,11 @@ But, with a few tricks...
 - selected mutations at rate $10^{-10}$
 - neutral mutations added afterwards
 
-*Runtime:* 8 hours
-
-
-# Example 1: landscapes of diversity
-
-![Langley et al 2012](figs/from_the_literature/langley-et-al-2012-chr3-pi-and-rho.png)
-
-
-## Diversity correlates with recombination rate
-
-:::: {.columns}
-:::::::: {.column width=80%}
-
-
-![Corbett-Detig et al](figs/from_the_literature/corbett-detig-divergence-recomb-all-species.png){width=85%}
-
-::::
-:::::::: {.column width=20%}
-
-
-*Hudson 1994; Cutter & Payseur 2013; Corbett-Detig et al 2015*
-
-::::
-::::::::
-
-## The *Mimulus aurantiacus* species complex
-
-::: {.centered}
-![](figs/aurantiacus/phylogeny.png)
-:::
-
----------------------
-
-:::: {.columns}
-:::::::: {.column width=80%}
-
-![](figs/aurantiacus/rising_landscapes/divergence_by_node_aura_LG3.png)
-
-::::
-:::::::: {.column width=20%}
-
-![](figs/aurantiacus/labeled_phylogeny_aura.png){width="250%"}
-
-::::
-::::::::
-
-
-## Simulations
-
-::: {.columns}
-::::::: {.column width="70%"}
-
-- $N=10,000$ diploids
-- burn-in for $10N$ generations
-- population split, with either:
-    
-    * neutral
-    * background selection
-    * selection against introgressed alleles
-    * positive selection
-    * local adaptation
-
-:::
-::::::: {.column width="30%"}
-
-:::: {.flushright}
-![](figs/murillo.jpeg)
-
-::::: {.caption}
-Murillo Rodrigues
-:::::
-::::
-
-:::
-:::::::
-
-
-------------------
-
-<!--
-Fig 7. Genomic landscapes simulated under different divergence histories.
-Each row of plots shows patterns of within- and between-population variation (π, dxy, and FST) across the chromosome (500-kb windows) at 5 time points (N generations, where N = 10,000) during one of the scenarios The selection parameter (Ns, where s = Ns/N), proportion of deleterious (−) and positive mutations (+), and number of migrants per generation (Nm; 0 unless stated) for these simulations are as follows: (i) neutral divergence (no selection), (ii) BGS (−Ns = 100; −prop = 0.1), (iii) BDMI (−Ns = 100, −prop = 0.05, Nm = 0.1), (iv) positive selection (+Ns = 100, +prop = 0.001), (v) BGS and positive selection (−Ns = 100, −prop = 0.1; +Ns = 100, +prop = 0.005), and (vi) local adaptation (+Ns = 100, +prop = 0.001, Nm = 0.1). The gray boxes in the first column show the areas of the chromosome that are experiencing selection, while the white central area evolves neutrally. Note that π (in populations a and b) and dxy have been mean centered so they can be viewed on the same scale. Uncentered values and additional simulations with different parameter combinations and more time points can be found in S13 Fig. BDMI, Bateson-Dobzhansky-Muller incompatibility; BGS, background selection.
-
-![](figs/aurantiacus/sim_results.png)
--->
-
-![](figs/sim_mimulus_landscapes.svg){width=100%}
-
-::::: {.flushright}
-
-::::::::::: {.caption}
-From [Widespread selection and gene flow shape the genomic landscape during a radiation of monkeyflowers](https://doi.org/10.1371/journal.pbio.3000391),
-Stankowski, Chase, Fuiten, Rodrigues, Ralph, and Streisfeld;
-PLoS Bio 2019.
-:::::::::::
-:::::
-
-------------
-
-Conclusions:
-
-* <strike>neutral</strike>
-* <strike>background selection</strike>
-* <strike>selection against introgressed alleles</strike>
-* positive selection
-* local adaptation
-
-::::: {.flushright}
-
-::::::::::: {.caption}
-From [Widespread selection and gene flow shape the genomic landscape during a radiation of monkeyflowers](https://doi.org/10.1371/journal.pbio.3000391),
-Stankowski, Chase, Fuiten, Rodrigues, Ralph, and Streisfeld;
-PLoS Bio 2019.
-:::::::::::
-:::::
+*Runtime:* 8 hours on a single core
 
 
 
-# Example 2: identifying sweeps
-
-
-![https://academic.oup.com/g3journal/article/8/6/1959/6028059](figs/shic_images.png)
-
------------
-
-![https://academic.oup.com/g3journal/article/8/6/1959/6028059](figs/shic_cnn.png)
-
-
-# Example 3: predicting location
+# Example: predicting location
 
 ![](figs/spatial_pedigree.png)
 
@@ -1051,16 +861,15 @@ from [Battey et al 2020](https://elifesciences.org/articles/54507)
 :::::
 ::::
 
-# Example 4: dispersal maps
+# Example: dispersal maps
 
-
-<!--
+------------
+ 
 ![trees in space, by CJ Battey](figs/spacetree_1.png)
 
 ::: {.caption}
 by [CJ Battey](cjbattey.com)
 :::
--->
 
 -------------
 

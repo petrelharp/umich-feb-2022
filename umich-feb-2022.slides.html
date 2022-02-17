@@ -101,6 +101,11 @@
 <li class="fragment">encode the basic <em>mechanisms</em> of life</li>
 <li class="fragment">reflect past <em>history</em> and <em>process</em></li>
 </ul>
+<div class="fragment">
+<figure>
+<img data-src="figs/kreitman-1983.png" alt="Genotype matrix from Kreitman 1983" /><figcaption aria-hidden="true">Genotype matrix from Kreitman 1983</figcaption>
+</figure>
+</div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -113,9 +118,6 @@
 </div>
 <div class="fragment">
 <p>and your sixteen great-great-grandparents</p>
-</div>
-<div class="fragment">
-<p>… see where this is going?</p>
 </div>
 </section>
 <section id="genealogical-ancestors" class="slide level2">
@@ -143,8 +145,8 @@
 </div>
 </div>
 </section>
-<section id="you-and-your-greatk-1-grand-parents" class="slide level2">
-<h2>You and your great<span class="math inline">\({}^{k-1}\)</span>-grand parents</h2>
+<section id="you-and-your-greatk-2-grand-parents" class="slide level2">
+<h2>You and your great<span class="math inline">\({}^{k-2}\)</span>-grand parents</h2>
 <p>The number of <span class="math inline">\(k^\text{th}\)</span> <em>genetic</em> ancestors grows <em>linearly</em> with <span class="math inline">\(k\)</span>.</p>
 <div class="centered">
 <p><img data-src="figs/gcbias/num_genetics_vs_genealogical_ancs.png" /></p>
@@ -173,38 +175,6 @@
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
-<div class="centered">
-<p><img data-src="figs/gcbias/family_tree.png" style="width:60.0%" /></p>
-</div>
-<div class="caption">
-<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
-</div>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="centered">
-<p><img data-src="figs/gcbias/family_tree_w_trans.png" style="width:60.0%" /></p>
-</div>
-<div class="caption">
-<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
-</div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div class="centered">
-<p><img data-src="figs/gcbias/family_tree_w_trans_2.png" style="width:60.0%" /></p>
-</div>
-<div class="caption">
-<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
-</div>
-</section></section>
-<section>
-<section id="section-6" class="title-slide slide level1">
-<h1></h1>
-
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
 <p>Everyone is related by a vast genealogical network.</p>
 <div class="fragment">
 <p>We get to observe <em>genomes</em>, noisily transmitted through it.</p>
@@ -227,20 +197,20 @@
 <li><p>How do organisms disperse across the landscape? <em>(dispersal maps)</em></p></li>
 </ol>
 </section>
-<section id="inverse-problems" class="slide level2">
-<h2>Inverse problems</h2>
+<section id="section-4" class="slide level2">
+<h2></h2>
 <p><img data-src="figs/modeling_reality.png" /></p>
 </section>
-<section id="inverse-problems-1" class="slide level2">
-<h2>Inverse problems</h2>
+<section id="section-5" class="slide level2">
+<h2></h2>
 <p><img data-src="figs/modeling_model_parameters.png" /></p>
 </section>
-<section id="inverse-problems-2" class="slide level2">
-<h2>Inverse problems</h2>
+<section id="section-6" class="slide level2">
+<h2></h2>
 <p><img data-src="figs/modeling_model_parameters_inverse.png" /></p>
 </section>
-<section id="inverse-problems-3" class="slide level2">
-<h2>Inverse problems</h2>
+<section id="section-7" class="slide level2">
+<h2></h2>
 <p><img data-src="figs/modeling_parameters_inverse_computer.png" /></p>
 </section>
 <section id="simulation-based-inference-1" class="slide level2">
@@ -251,7 +221,6 @@
 <ul>
 <li>bespoke confirmatory simulations</li>
 <li>optimization of one or two parameters <!-- *(if between-simulation noise is small)* --></li>
-<li>machine learning predictors (e.g., random forests)</li>
 <li>Approximate Bayesian Computation (ABC)</li>
 <li>deep learning</li>
 </ul>
@@ -259,32 +228,12 @@
 <section>
 <section id="what-do-we-need" class="title-slide slide level1">
 <h1>What do we need</h1>
-<!--
-## Ok, then: selection.
 
-:::: {.columns}
-:::::::: {.column width=50%}
-
-
-To test theories and fit models, we need *simulations* with realistic
-
-1. population sizes,
-2. ecology,
-2. genomes,
-3. selective pressures,
-4. histories, and
-5. geography.
-
-
-::::
-:::::::: {.column width=50%}
-
-![map of mimulus](figs/aurantiacus/just_map.png)
-
-::::
-::::::::
-
--->
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<p>Fast simulation</p>
+<p>Fast statistic computation</p>
 </section>
 <section id="wish-list" class="slide level2">
 <h2>Wish list:</h2>
@@ -337,7 +286,7 @@ from millions of individuals.</p>
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2" data-background-image="figs/oregon_geological_map.png">
+<section id="section-9" class="slide level2" data-background-image="figs/oregon_geological_map.png">
 <h2 data-background-image="figs/oregon_geological_map.png"></h2>
 </section>
 <section id="enter-slim" class="slide level2">
@@ -363,10 +312,10 @@ from millions of individuals.</p>
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2" data-background-image="figs/slim_screenshot.png" data-background-position="center" data-background-size="100%">
+<section id="section-10" class="slide level2" data-background-image="figs/slim_screenshot.png" data-background-position="center" data-background-size="100%">
 <h2 data-background-image="figs/slim_screenshot.png" data-background-position="center" data-background-size="100%"></h2>
 </section>
-<section id="section-10" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <div class="smallish">
 <div class="columns">
@@ -420,7 +369,7 @@ from millions of individuals.</p>
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <ul>
 <li><s>Whole genomes,</s>*</li>
@@ -651,17 +600,6 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <figure>
 <img data-src="figs/ts_ex/tree_sequence_genotype_and_tree.png" style="width:60.0%" alt="genotypes and a tree" /><figcaption aria-hidden="true">genotypes and a tree</figcaption>
 </figure>
-</section>
-<section id="fast-genotype-statistics-too" class="slide level2">
-<h2>Fast genotype statistics, too!</h2>
-<div class="centered">
-<figure>
-<img data-src="figs/treestats/benchmarks_without_copy_longer_genome.png" style="width:70.0%" alt="efficiency of treestat computation" /><figcaption aria-hidden="true">efficiency of treestat computation</figcaption>
-</figure>
-</div>
-<div class="caption">
-<p>from Ralph, Thornton and Kelleher 2019, <a href="https://doi.org/10.1534/genetics.120.303253">Efficiently summarizing relationships in large samples</a></p>
-</div>
 </section></section>
 <section>
 <section id="summarizing-genomes-and-genealogies" class="title-slide slide level1">
@@ -675,13 +613,6 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <img data-src="figs/treestats/benchmarks_without_copy_longer_genome.png" style="width:70.0%" alt="efficiency of treestat computation" /><figcaption aria-hidden="true">efficiency of treestat computation</figcaption>
 </figure>
 </div>
-<div class="caption">
-<p>from <a href="https://www.biorxiv.org/content/10.1101/779132v1?rss=1">R., Thornton and Kelleher 2019, <em>Efficiently summarizing relationships in large samples</em></a>, bioRxiv</p>
-</div>
-</section>
-<section id="section-12" class="slide level2">
-<h2></h2>
-<p><strong>What do genotypes tell us about the genealogies?</strong></p>
 <div class="caption">
 <p>from <a href="https://www.biorxiv.org/content/10.1101/779132v1?rss=1">R., Thornton and Kelleher 2019, <em>Efficiently summarizing relationships in large samples</em></a>, bioRxiv</p>
 </div>
@@ -830,6 +761,10 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <p>But, with a few tricks…</p>
 </div>
 </section>
+<section id="section-17" class="slide level2">
+<h2></h2>
+<p>The key idea: simplify</p>
+</section>
 <section id="a-100x-speedup" class="slide level2">
 <h2>A 100x speedup!</h2>
 <div class="columns">
@@ -866,122 +801,17 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <li>selected mutations at rate <span class="math inline">\(10^{-10}\)</span></li>
 <li>neutral mutations added afterwards</li>
 </ul>
-<p><em>Runtime:</em> 8 hours</p>
+<p><em>Runtime:</em> 8 hours on a single core</p>
 </section></section>
 <section>
-<section id="example-1-landscapes-of-diversity" class="title-slide slide level1">
-<h1>Example 1: landscapes of diversity</h1>
-<figure>
-<img data-src="figs/from_the_literature/langley-et-al-2012-chr3-pi-and-rho.png" alt="Langley et al 2012" /><figcaption aria-hidden="true">Langley et al 2012</figcaption>
-</figure>
-</section>
-<section id="diversity-correlates-with-recombination-rate" class="slide level2">
-<h2>Diversity correlates with recombination rate</h2>
-<div class="columns">
-<div class="column" style="width:80%;">
-<figure>
-<img data-src="figs/from_the_literature/corbett-detig-divergence-recomb-all-species.png" style="width:85.0%" alt="Corbett-Detig et al" /><figcaption aria-hidden="true">Corbett-Detig et al</figcaption>
-</figure>
-</div><div class="column" style="width:20%;">
-<p><em>Hudson 1994; Cutter &amp; Payseur 2013; Corbett-Detig et al 2015</em></p>
-</div>
-</div>
-</section>
-<section id="the-mimulus-aurantiacus-species-complex" class="slide level2">
-<h2>The <em>Mimulus aurantiacus</em> species complex</h2>
-<div class="centered">
-<p><img data-src="figs/aurantiacus/phylogeny.png" /></p>
-</div>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" style="width:80%;">
-<p><img data-src="figs/aurantiacus/rising_landscapes/divergence_by_node_aura_LG3.png" /></p>
-</div><div class="column" style="width:20%;">
-<p><img data-src="figs/aurantiacus/labeled_phylogeny_aura.png" style="width:250.0%" /></p>
-</div>
-</div>
-</section>
-<section id="simulations" class="slide level2">
-<h2>Simulations</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<ul>
-<li><p><span class="math inline">\(N=10,000\)</span> diploids</p></li>
-<li><p>burn-in for <span class="math inline">\(10N\)</span> generations</p></li>
-<li><p>population split, with either:</p>
-<ul>
-<li>neutral</li>
-<li>background selection</li>
-<li>selection against introgressed alleles</li>
-<li>positive selection</li>
-<li>local adaptation</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:30%;">
-<div class="flushright">
-<p><img data-src="figs/murillo.jpeg" /></p>
-<div class="caption">
-<p>Murillo Rodrigues</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<!--
-Fig 7. Genomic landscapes simulated under different divergence histories.
-Each row of plots shows patterns of within- and between-population variation (π, dxy, and FST) across the chromosome (500-kb windows) at 5 time points (N generations, where N = 10,000) during one of the scenarios The selection parameter (Ns, where s = Ns/N), proportion of deleterious (−) and positive mutations (+), and number of migrants per generation (Nm; 0 unless stated) for these simulations are as follows: (i) neutral divergence (no selection), (ii) BGS (−Ns = 100; −prop = 0.1), (iii) BDMI (−Ns = 100, −prop = 0.05, Nm = 0.1), (iv) positive selection (+Ns = 100, +prop = 0.001), (v) BGS and positive selection (−Ns = 100, −prop = 0.1; +Ns = 100, +prop = 0.005), and (vi) local adaptation (+Ns = 100, +prop = 0.001, Nm = 0.1). The gray boxes in the first column show the areas of the chromosome that are experiencing selection, while the white central area evolves neutrally. Note that π (in populations a and b) and dxy have been mean centered so they can be viewed on the same scale. Uncentered values and additional simulations with different parameter combinations and more time points can be found in S13 Fig. BDMI, Bateson-Dobzhansky-Muller incompatibility; BGS, background selection.
-
-![](figs/aurantiacus/sim_results.png)
--->
-<p><img data-src="figs/sim_mimulus_landscapes.svg" style="width:100.0%" /></p>
-<div class="flushright">
-<div class="caption">
-<p>From <a href="https://doi.org/10.1371/journal.pbio.3000391">Widespread selection and gene flow shape the genomic landscape during a radiation of monkeyflowers</a>, Stankowski, Chase, Fuiten, Rodrigues, Ralph, and Streisfeld; PLoS Bio 2019.</p>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<p>Conclusions:</p>
-<ul>
-<li><strike>neutral</strike></li>
-<li><strike>background selection</strike></li>
-<li><strike>selection against introgressed alleles</strike></li>
-<li>positive selection</li>
-<li>local adaptation</li>
-</ul>
-<div class="flushright">
-<div class="caption">
-<p>From <a href="https://doi.org/10.1371/journal.pbio.3000391">Widespread selection and gene flow shape the genomic landscape during a radiation of monkeyflowers</a>, Stankowski, Chase, Fuiten, Rodrigues, Ralph, and Streisfeld; PLoS Bio 2019.</p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="example-2-identifying-sweeps" class="title-slide slide level1">
-<h1>Example 2: identifying sweeps</h1>
-<figure>
-<img data-src="figs/shic_images.png" alt="https://academic.oup.com/g3journal/article/8/6/1959/6028059" /><figcaption aria-hidden="true">https://academic.oup.com/g3journal/article/8/6/1959/6028059</figcaption>
-</figure>
-</section>
-<section class="slide level2">
-
-<figure>
-<img data-src="figs/shic_cnn.png" alt="https://academic.oup.com/g3journal/article/8/6/1959/6028059" /><figcaption aria-hidden="true">https://academic.oup.com/g3journal/article/8/6/1959/6028059</figcaption>
-</figure>
-</section></section>
-<section>
-<section id="example-3-predicting-location" class="title-slide slide level1">
-<h1>Example 3: predicting location</h1>
+<section id="example-predicting-location" class="title-slide slide level1">
+<h1>Example: predicting location</h1>
 <p><img data-src="figs/spatial_pedigree.png" /></p>
 <div class="caption">
 <p>from <a href="https://arxiv.org/abs/1904.09847">Bradburd &amp; Ralph 2019</a></p>
 </div>
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <div class="centered">
 <p><img data-src="figs/locator_methods.png" /></p>
@@ -992,7 +822,7 @@ Each row of plots shows patterns of within- and between-population variation (π
 <h2>locator (<a href="https://elifesciences.org/articles/54507">Battey et al 2020</a>)</h2>
 <p><img data-src="figs/locator_results.png" /></p>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <p><img data-src="figs/locator_spatial_tree_sequence.png" /></p>
 <div class="flushright">
@@ -1002,15 +832,18 @@ Each row of plots shows patterns of within- and between-population variation (π
 </div>
 </section></section>
 <section>
-<section id="example-4-dispersal-maps" class="title-slide slide level1">
-<h1>Example 4: dispersal maps</h1>
-<!--
-![trees in space, by CJ Battey](figs/spacetree_1.png)
+<section id="example-dispersal-maps" class="title-slide slide level1">
+<h1>Example: dispersal maps</h1>
 
-::: {.caption}
-by [CJ Battey](cjbattey.com)
-:::
--->
+</section>
+<section class="slide level2">
+
+<figure>
+<img data-src="figs/spacetree_1.png" alt="trees in space, by CJ Battey" /><figcaption aria-hidden="true">trees in space, by CJ Battey</figcaption>
+</figure>
+<div class="caption">
+<p>by <a href="cjbattey.com">CJ Battey</a></p>
+</div>
 </section>
 <section class="slide level2">
 
@@ -1114,7 +947,7 @@ by [CJ Battey](cjbattey.com)
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2" data-background-image="figs/guillemots_thanks.png" data-background-position="center" data-background-size="50%">
+<section id="section-20" class="slide level2" data-background-image="figs/guillemots_thanks.png" data-background-position="center" data-background-size="50%">
 <h2 data-background-image="figs/guillemots_thanks.png" data-background-position="center" data-background-size="50%"></h2>
 </section></section>
     </div>
