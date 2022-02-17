@@ -1,0 +1,13 @@
+Title: "Scaling up genomic computation with the tree sequence"
+
+Abstract:
+Computer simulations of evolving populations are a crucial tool for
+exploration, inference, and validation with population genomic data.  However,
+due to the size of the genome, simulation of large, sexual populations -
+especially across geography - has been a major challenge.  I will discuss how
+efforts to make these simulations feasible has led to development of a new data
+structure, the succinct tree sequence, that stores genetic variation data
+orders of magnitude more efficiently as usual methods, while at the same time
+encoding the entire genealogical history of every genome and making computation
+with these genomes orders of magnitude more efficient. I will also discuss some
+applications 
