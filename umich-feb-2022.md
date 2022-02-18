@@ -17,135 +17,12 @@ date: "Department of Statistics <br/> University of Michigan // 18 Feb 2022"
 *slides:* [github.com/petrelharp/umich-feb-2022](https://petrelharp.github.io/umich-feb-2022/umich-feb-2022.slides.html)
 
 
-# Genomes and genealogies
-
-## Genomes
-
-> - are very big ($10^7$--$10^{12}$ nucleotides)
-> - encode the basic *mechanisms* of life
-> - reflect past *history* and *process*
-
-. . .
-
-![Genotype matrix from Kreitman 1983](figs/kreitman-1983.png)
-
-## 
-
-Your two copies of the genome
-were inherited, noisily, from your two parents,
-
-. . .
-
-and from your four grandparents,
-
-. . .
-
-and your eight great-grandparents
-
-. . .
-
-and your sixteen great-great-grandparents
-
-
-
-## Genealogical ancestors
-
-In a well-mixed population of size $N$,
-
-- A most recent common ancestor of *everyone* lived at $\approx \log_2 N$ generations ago.
-
-- For humans: $\approx 500$ years; 
-    but including geography and history,
-    $\approx$ 2--3 thousand years
-    (Chang ’99; Rohde, Olson & Chang ’04)
-
-- *Everyone* alive $\approx 1.77 \log_2 N$ generations ago
-    is either an ancestor of everyone or has left behind no descendants. (Chang ’99)
-
-## Meiosis & Recombination
-
-::: {.columns}
-::::::: {.column width=50%}
-
-![recombination](figs/recombination-cartoon-crop.png)
-
-:::
-::::::: {.column width=50%}
-
-- You have two copies of each chromosome, 
-  one from each parent.
-
-- When you make a gamete, the copies *recombine*, at Poisson($\rho$) locations.
-
-- *Mutations* appear at Poisson($\mu$) locations.
-
-:::
-::::::
-
-## You and your great${}^{k-2}$-grand parents
-
-The number of $k^\text{th}$ *genetic* ancestors
-grows *linearly* with $k$.
-
-::: {.centered}
-![](figs/gcbias/num_genetics_vs_genealogical_ancs.png)
-:::
-
-::: {.caption}
-from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
-:::
-
-## 
-
-::: {.centered}
-![](figs/gcbias/parents_grandparents.png){width=60%}
-:::
-
-::: {.caption}
-from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
-:::
-
-
-## 
-
-::: {.centered}
-![](figs/gcbias/male_line.png){width=60%}
-:::
-
-::: {.caption}
-from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
-:::
+# Inference, with genomes
 
 
 ##
 
-Everyone is related by a vast genealogical network.
-
-. . .
-
-We get to observe *genomes*, noisily transmitted through it.
-
-. . .
-
-What can we learn about its structure? history? biology?
-
-
-
-# Simulation-based inference
-
-## Some questions
-
-1. What forces contribute to the variation in genetic diversity
-    along the genome? *(explaining variation in diversity)*
-
-2. Which locations along the genome have been the recent targets
-    of positive natural selection? *(identifying sweeps)*
-
-3. Where did this individual come from?
-    *(inferring location)*
-
-4. How do organisms disperse across the landscape? *(dispersal maps)*
-
+![](figs/modeling_empty.png)
 
 ##
 
@@ -181,9 +58,9 @@ What can we learn about its structure? history? biology?
 
 ##
 
-- Fast simulation of genomes
+1. Fast simulation of genomes
 
-- Fast computation of summary statistics
+2. Fast computation of summary statistics
 
 ## Wish list:
 
@@ -245,7 +122,6 @@ from millions of individuals.
 
 
 
-## {data-background-image="figs/oregon_geological_map.png"}
 
 ## Enter SLiM
 
@@ -274,8 +150,6 @@ an individual-based, scriptable forwards simulator
 :::::::
 
 
-
-## {data-background-image="figs/slim_screenshot.png" data-background-position=center data-background-size=100%}
 
 ##
 
@@ -339,21 +213,111 @@ an individual-based, scriptable forwards simulator
 
 - <s>Whole genomes,</s>*
 
+
+
+
+# Genomes and genealogies
+
+## Genomes
+
+> - are very big ($10^7$--$10^{12}$ nucleotides)
+> - encode the basic *mechanisms* of life
+> - reflect past *history* and *process*
+
 . . .
 
-Idea: if we record *how everyone is related to everyone else*,
+![Genotype matrix from Kreitman 1983](figs/kreitman-1983.png)
+
+## 
+
+Your two copies of the genome
+were inherited, noisily, from your two parents,
 
 . . .
 
-we can put down neutral mutations
-*after the simulation is over*
-instead of carrying them along.
+and from your four grandparents,
 
 . . .
 
-Since neutral mutations don't affect demography,
+and your eight great-grandparents
 
-this is *equivalent* to having kept track of them throughout.
+. . .
+
+and your sixteen great-great-grandparents
+
+
+
+<!--
+
+## Genealogical ancestors
+
+In a well-mixed population of size $N$,
+
+- A most recent common ancestor of *everyone* lived at $\approx \log_2 N$ generations ago.
+
+- For humans: $\approx 500$ years; 
+    but including geography and history,
+    $\approx$ 2--3 thousand years
+    (Chang ’99; Rohde, Olson & Chang ’04)
+
+- *Everyone* alive $\approx 1.77 \log_2 N$ generations ago
+    is either an ancestor of everyone or has left behind no descendants. (Chang ’99)
+
+-->
+
+## Meiosis & Recombination
+
+::: {.columns}
+::::::: {.column width=50%}
+
+![recombination](figs/recombination-cartoon-crop.png)
+
+:::
+::::::: {.column width=50%}
+
+- You have two copies of each chromosome, 
+  one from each parent.
+
+- When you make a gamete, the copies *recombine*, at Poisson($\rho$) locations.
+
+- *Mutations* appear at Poisson($\mu$) locations.
+
+:::
+::::::
+
+## You and your great${}^{k-2}$-grand parents
+
+The number of $k^\text{th}$ *genetic* ancestors
+grows *linearly* with $k$.
+
+::: {.centered}
+![](figs/gcbias/num_genetics_vs_genealogical_ancs.png)
+:::
+
+::: {.caption}
+from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
+:::
+
+## 
+
+::: {.centered}
+![](figs/gcbias/parents_grandparents.png){width=60%}
+:::
+
+::: {.caption}
+from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
+:::
+
+
+## 
+
+::: {.centered}
+![](figs/gcbias/male_line.png){width=60%}
+:::
+
+::: {.caption}
+from [gcbias.org](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/)
+:::
 
 
 
@@ -582,7 +546,7 @@ $O(N + T + M)$ things
 :::
 
 ::: {.caption}
-from [R., Thornton and Kelleher 2019, *Efficiently summarizing relationships in large samples*](https://www.biorxiv.org/content/10.1101/779132v1?rss=1), bioRxiv
+from [R., Thornton and Kelleher 2019, *Efficiently summarizing relationships in large samples*](https://academic.oup.com/genetics/article/215/3/779/5930459), Genetics
 :::
 
 
@@ -608,7 +572,7 @@ counts how many mutations differ between two sequences.
 :::
 :::::: {.column width=47%}
 
-<!-- nothing til next slide -->
+![site stats](figs/ts_ex/tree_sequence_site.png)
 
 :::
 ::::::
@@ -618,21 +582,6 @@ counts how many mutations differ between two sequences.
 ::: {.columns}
 :::::: {.column width=47%}
 
-*Genotypes:*
-
-1. For each site,
-2. look at who has inherited which alleles,
-3. and add a *summary* of these values to the running total.
-
-*Example:*
-sequence divergence
-counts how many mutations differ between two sequences.
-
-:::
-:::::: {.column width=5%}
-
-:::
-:::::: {.column width=47%}
 
 *Trees:*
 
@@ -644,17 +593,21 @@ counts how many mutations differ between two sequences.
 the mean time to most recent common ancestor between two sequences.
 
 :::
+:::::: {.column width=5%}
+
+:::
+:::::: {.column width=47%}
+
+![branch stats](figs/ts_ex/tree_sequence_branch.png)
+
+:::
 ::::::
-
-##
-
-![site and branch stats](figs/ts_ex/tree_sequence_site_and_branch.png)
 
 ##
 
 Given
 
-1. a *weight* $w_i \in \mathbb{R}^n$ to each *sample node*, and
+1. a *weight* $w_i \in \mathbb{R}^n$ for each *sample node*, and
 2. a *summary function* $f : \mathbb{R}^n \to \mathbb{R}$,
 
 . . .
@@ -663,7 +616,7 @@ the **Site** statistic
 $$\begin{equation}
  \text{Site}(f,w) = \sum_{i: \text{sites}} \sum_{a: \text{alleles}_i} f(w_a)
 \end{equation}$$
-is the total summarized weights of all *alleles* at all sites,
+is the total summarized weights of all mutations,
 
 . . .
 
@@ -682,8 +635,8 @@ $$\begin{equation}
 
 . . .
 
-Dealing directly with genealogies can
-*remove the layer of noise due to mutation*:
+Dealing directly with genealogies
+removes the layer of noise due to mutation:
 $$\begin{equation}
     \frac{1}{\mu^2} \var\left[\text{Site}(f,w)\right]
     =
@@ -692,6 +645,10 @@ $$\begin{equation}
     \frac{1}{n}
     \E\left[\text{Branch}(f^2,w)\right]
 \end{equation}$$
+
+. . .
+
+and might produce *unbiased* estimates from ascertained genotype data.
 
 ::: {.caption .greyed .floatright}
 also see R., TPB, 2019
@@ -739,6 +696,19 @@ Since neutral mutations don't affect demography,
 
 this is *equivalent* to having kept track of them throughout.
 
+
+------------
+
+This means recording the entire genetic history of **everyone** in the population, **ever**.
+
+.  . .
+
+It is *not* clear this is a good idea.
+
+. . .
+
+But, with a few tricks...
+
 . . .
 
 :::: {.columns}
@@ -746,10 +716,10 @@ this is *equivalent* to having kept track of them throughout.
 
 :::: {.caption}
 From 
-Kelleher, Thornton, Ashander, and Ralph 2018,
+Kelleher, Thornton, Ashander, and R. 2018,
 [Efficient pedigree recording for fast population genetics simulation](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006581).
 
-and Haller, Galloway, Kelleher, Messer, and Ralph 2018,
+and Haller, Galloway, Kelleher, Messer, and R. 2018,
 [*Tree‐sequence recording in SLiM opens new horizons for forward‐time simulation of whole genomes*](https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12968)
 :::
 
@@ -765,22 +735,7 @@ and Haller, Galloway, Kelleher, Messer, and Ralph 2018,
 ::::
 ::::::::
 
-------------
 
-This means recording the entire genetic history of **everyone** in the population, **ever**.
-
-.  . .
-
-It is *not* clear this is a good idea.
-
-. . .
-
-But, with a few tricks...
-
-
-##
-
-The key idea: simplify
 
 
 ## A 100x speedup!
@@ -803,13 +758,6 @@ The key idea: simplify
 ::::::
 
 
-## What else can you do with tree sequences?
-
-> - recorded pedigree and migration history
-> - true ancestry assignment
-> - *recapitation*: fast, post-hoc initialization with coalescent simulation 
-> - fast, convenient computation
-
 
 ---------------------
 
@@ -831,7 +779,7 @@ The key idea: simplify
 ![](figs/spatial_pedigree.png)
 
 ::::: {.caption}
-from [Bradburd & Ralph 2019](https://arxiv.org/abs/1904.09847)
+from [Bradburd & R. 2019](https://arxiv.org/abs/1904.09847)
 :::::
 
 ## 

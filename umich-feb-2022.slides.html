@@ -90,130 +90,31 @@
 <p><em>slides:</em> <a href="https://petrelharp.github.io/umich-feb-2022/umich-feb-2022.slides.html">github.com/petrelharp/umich-feb-2022</a></p>
 </section></section>
 <section>
-<section id="genomes-and-genealogies" class="title-slide slide level1">
-<h1>Genomes and genealogies</h1>
+<section id="inference-with-genomes" class="title-slide slide level1">
+<h1>Inference, with genomes</h1>
 
-</section>
-<section id="genomes" class="slide level2">
-<h2>Genomes</h2>
-<ul>
-<li class="fragment">are very big (<span class="math inline">\(10^7\)</span>–<span class="math inline">\(10^{12}\)</span> nucleotides)</li>
-<li class="fragment">encode the basic <em>mechanisms</em> of life</li>
-<li class="fragment">reflect past <em>history</em> and <em>process</em></li>
-</ul>
-<div class="fragment">
-<figure>
-<img data-src="figs/kreitman-1983.png" alt="Genotype matrix from Kreitman 1983" /><figcaption aria-hidden="true">Genotype matrix from Kreitman 1983</figcaption>
-</figure>
-</div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>Your two copies of the genome were inherited, noisily, from your two parents,</p>
-<div class="fragment">
-<p>and from your four grandparents,</p>
-</div>
-<div class="fragment">
-<p>and your eight great-grandparents</p>
-</div>
-<div class="fragment">
-<p>and your sixteen great-great-grandparents</p>
-</div>
-</section>
-<section id="genealogical-ancestors" class="slide level2">
-<h2>Genealogical ancestors</h2>
-<p>In a well-mixed population of size <span class="math inline">\(N\)</span>,</p>
-<ul>
-<li><p>A most recent common ancestor of <em>everyone</em> lived at <span class="math inline">\(\approx \log_2 N\)</span> generations ago.</p></li>
-<li><p>For humans: <span class="math inline">\(\approx 500\)</span> years; but including geography and history, <span class="math inline">\(\approx\)</span> 2–3 thousand years (Chang ’99; Rohde, Olson &amp; Chang ’04)</p></li>
-<li><p><em>Everyone</em> alive <span class="math inline">\(\approx 1.77 \log_2 N\)</span> generations ago is either an ancestor of everyone or has left behind no descendants. (Chang ’99)</p></li>
-</ul>
-</section>
-<section id="meiosis-recombination" class="slide level2">
-<h2>Meiosis &amp; Recombination</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<figure>
-<img data-src="figs/recombination-cartoon-crop.png" alt="recombination" /><figcaption aria-hidden="true">recombination</figcaption>
-</figure>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><p>You have two copies of each chromosome, one from each parent.</p></li>
-<li><p>When you make a gamete, the copies <em>recombine</em>, at Poisson(<span class="math inline">\(\rho\)</span>) locations.</p></li>
-<li><p><em>Mutations</em> appear at Poisson(<span class="math inline">\(\mu\)</span>) locations.</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="you-and-your-greatk-2-grand-parents" class="slide level2">
-<h2>You and your great<span class="math inline">\({}^{k-2}\)</span>-grand parents</h2>
-<p>The number of <span class="math inline">\(k^\text{th}\)</span> <em>genetic</em> ancestors grows <em>linearly</em> with <span class="math inline">\(k\)</span>.</p>
-<div class="centered">
-<p><img data-src="figs/gcbias/num_genetics_vs_genealogical_ancs.png" /></p>
-</div>
-<div class="caption">
-<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
-</div>
+<p><img data-src="figs/modeling_empty.png" /></p>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<div class="centered">
-<p><img data-src="figs/gcbias/parents_grandparents.png" style="width:60.0%" /></p>
-</div>
-<div class="caption">
-<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
-</div>
+<p><img data-src="figs/modeling_reality.png" /></p>
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-<div class="centered">
-<p><img data-src="figs/gcbias/male_line.png" style="width:60.0%" /></p>
-</div>
-<div class="caption">
-<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
-</div>
+<p><img data-src="figs/modeling_model_parameters.png" /></p>
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
-<p>Everyone is related by a vast genealogical network.</p>
-<div class="fragment">
-<p>We get to observe <em>genomes</em>, noisily transmitted through it.</p>
-</div>
-<div class="fragment">
-<p>What can we learn about its structure? history? biology?</p>
-</div>
-</section></section>
-<section>
-<section id="simulation-based-inference" class="title-slide slide level1">
-<h1>Simulation-based inference</h1>
-
-</section>
-<section id="some-questions" class="slide level2">
-<h2>Some questions</h2>
-<ol type="1">
-<li><p>What forces contribute to the variation in genetic diversity along the genome? <em>(explaining variation in diversity)</em></p></li>
-<li><p>Which locations along the genome have been the recent targets of positive natural selection? <em>(identifying sweeps)</em></p></li>
-<li><p>Where did this individual come from? <em>(inferring location)</em></p></li>
-<li><p>How do organisms disperse across the landscape? <em>(dispersal maps)</em></p></li>
-</ol>
+<p><img data-src="figs/modeling_model_parameters_inverse.png" /></p>
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
-<p><img data-src="figs/modeling_reality.png" /></p>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<p><img data-src="figs/modeling_model_parameters.png" /></p>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<p><img data-src="figs/modeling_model_parameters_inverse.png" /></p>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
 <p><img data-src="figs/modeling_parameters_inverse_computer.png" /></p>
 </section>
-<section id="simulation-based-inference-1" class="slide level2">
+<section id="simulation-based-inference" class="slide level2">
 <h2>Simulation-based inference</h2>
 <div class="centered">
 <p><img data-src="figs/modeling_parameters_inverse_computer.png" style="width:60.0%" /></p>
@@ -230,12 +131,12 @@
 <h1>What do we need</h1>
 
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
-<ul>
+<ol type="1">
 <li><p>Fast simulation of genomes</p></li>
 <li><p>Fast computation of summary statistics</p></li>
-</ul>
+</ol>
 </section>
 <section id="wish-list" class="slide level2">
 <h2>Wish list:</h2>
@@ -288,9 +189,6 @@ from millions of individuals.</p>
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2" data-background-image="figs/oregon_geological_map.png">
-<h2 data-background-image="figs/oregon_geological_map.png"></h2>
-</section>
 <section id="enter-slim" class="slide level2">
 <h2>Enter SLiM</h2>
 <div class="columns">
@@ -308,10 +206,7 @@ from millions of individuals.</p>
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2" data-background-image="figs/slim_screenshot.png" data-background-position="center" data-background-size="100%">
-<h2 data-background-image="figs/slim_screenshot.png" data-background-position="center" data-background-size="100%"></h2>
-</section>
-<section id="section-11" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <div class="smallish">
 <div class="columns">
@@ -365,22 +260,104 @@ from millions of individuals.</p>
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <ul>
 <li><s>Whole genomes,</s>*</li>
 </ul>
+</section></section>
+<section>
+<section id="genomes-and-genealogies" class="title-slide slide level1">
+<h1>Genomes and genealogies</h1>
+
+</section>
+<section id="genomes" class="slide level2">
+<h2>Genomes</h2>
+<ul>
+<li class="fragment">are very big (<span class="math inline">\(10^7\)</span>–<span class="math inline">\(10^{12}\)</span> nucleotides)</li>
+<li class="fragment">encode the basic <em>mechanisms</em> of life</li>
+<li class="fragment">reflect past <em>history</em> and <em>process</em></li>
+</ul>
 <div class="fragment">
-<p>Idea: if we record <em>how everyone is related to everyone else</em>,</p>
+<figure>
+<img data-src="figs/kreitman-1983.png" alt="Genotype matrix from Kreitman 1983" /><figcaption aria-hidden="true">Genotype matrix from Kreitman 1983</figcaption>
+</figure>
+</div>
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<p>Your two copies of the genome were inherited, noisily, from your two parents,</p>
+<div class="fragment">
+<p>and from your four grandparents,</p>
 </div>
 <div class="fragment">
-<p>we can put down neutral mutations <em>after the simulation is over</em> instead of carrying them along.</p>
+<p>and your eight great-grandparents</p>
 </div>
 <div class="fragment">
-<p>Since neutral mutations don’t affect demography,</p>
-<p>this is <em>equivalent</em> to having kept track of them throughout.</p>
+<p>and your sixteen great-great-grandparents</p>
+<!--
+
+## Genealogical ancestors
+
+In a well-mixed population of size $N$,
+
+- A most recent common ancestor of *everyone* lived at $\approx \log_2 N$ generations ago.
+
+- For humans: $\approx 500$ years; 
+    but including geography and history,
+    $\approx$ 2--3 thousand years
+    (Chang ’99; Rohde, Olson & Chang ’04)
+
+- *Everyone* alive $\approx 1.77 \log_2 N$ generations ago
+    is either an ancestor of everyone or has left behind no descendants. (Chang ’99)
+
+-->
+</div>
+</section>
+<section id="meiosis-recombination" class="slide level2">
+<h2>Meiosis &amp; Recombination</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<figure>
+<img data-src="figs/recombination-cartoon-crop.png" alt="recombination" /><figcaption aria-hidden="true">recombination</figcaption>
+</figure>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>You have two copies of each chromosome, one from each parent.</p></li>
+<li><p>When you make a gamete, the copies <em>recombine</em>, at Poisson(<span class="math inline">\(\rho\)</span>) locations.</p></li>
+<li><p><em>Mutations</em> appear at Poisson(<span class="math inline">\(\mu\)</span>) locations.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="you-and-your-greatk-2-grand-parents" class="slide level2">
+<h2>You and your great<span class="math inline">\({}^{k-2}\)</span>-grand parents</h2>
+<p>The number of <span class="math inline">\(k^\text{th}\)</span> <em>genetic</em> ancestors grows <em>linearly</em> with <span class="math inline">\(k\)</span>.</p>
+<div class="centered">
+<p><img data-src="figs/gcbias/num_genetics_vs_genealogical_ancs.png" /></p>
+</div>
+<div class="caption">
+<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
+</div>
+</section>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<div class="centered">
+<p><img data-src="figs/gcbias/parents_grandparents.png" style="width:60.0%" /></p>
+</div>
+<div class="caption">
+<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
+</div>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div class="centered">
+<p><img data-src="figs/gcbias/male_line.png" style="width:60.0%" /></p>
+</div>
+<div class="caption">
+<p>from <a href="https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">gcbias.org</a></p>
+</div>
 <!-- Tree sequences -->
-</div>
 </section></section>
 <section>
 <section id="the-tree-sequence" class="title-slide slide level1">
@@ -610,7 +587,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 </figure>
 </div>
 <div class="caption">
-<p>from <a href="https://www.biorxiv.org/content/10.1101/779132v1?rss=1">R., Thornton and Kelleher 2019, <em>Efficiently summarizing relationships in large samples</em></a>, bioRxiv</p>
+<p>from <a href="https://academic.oup.com/genetics/article/215/3/779/5930459">R., Thornton and Kelleher 2019, <em>Efficiently summarizing relationships in large samples</em></a>, Genetics</p>
 </div>
 </section>
 <section id="summaries-of-genotypes-and-genealogies" class="slide level2">
@@ -627,7 +604,9 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:47%;">
-<!-- nothing til next slide -->
+<figure>
+<img data-src="figs/ts_ex/tree_sequence_site.png" alt="site stats" /><figcaption aria-hidden="true">site stats</figcaption>
+</figure>
 </div>
 </div>
 </section>
@@ -635,16 +614,6 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <h2>Summaries of genotypes and genealogies</h2>
 <div class="columns">
 <div class="column" style="width:47%;">
-<p><em>Genotypes:</em></p>
-<ol type="1">
-<li>For each site,</li>
-<li>look at who has inherited which alleles,</li>
-<li>and add a <em>summary</em> of these values to the running total.</li>
-</ol>
-<p><em>Example:</em> sequence divergence counts how many mutations differ between two sequences.</p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:47%;">
 <p><em>Trees:</em></p>
 <ol type="1">
 <li>For each branch,</li>
@@ -652,26 +621,26 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <li>and add the <em>expected contribution</em> to the running total.</li>
 </ol>
 <p><em>Example:</em> the mean time to most recent common ancestor between two sequences.</p>
-</div>
-</div>
-</section>
-<section id="section-13" class="slide level2">
-<h2></h2>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:47%;">
 <figure>
-<img data-src="figs/ts_ex/tree_sequence_site_and_branch.png" alt="site and branch stats" /><figcaption aria-hidden="true">site and branch stats</figcaption>
+<img data-src="figs/ts_ex/tree_sequence_branch.png" alt="branch stats" /><figcaption aria-hidden="true">branch stats</figcaption>
 </figure>
+</div>
+</div>
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <p>Given</p>
 <ol type="1">
-<li>a <em>weight</em> <span class="math inline">\(w_i \in \mathbb{R}^n\)</span> to each <em>sample node</em>, and</li>
+<li>a <em>weight</em> <span class="math inline">\(w_i \in \mathbb{R}^n\)</span> for each <em>sample node</em>, and</li>
 <li>a <em>summary function</em> <span class="math inline">\(f : \mathbb{R}^n \to \mathbb{R}\)</span>,</li>
 </ol>
 <div class="fragment">
 <p>the <strong>Site</strong> statistic <span class="math display">\[\begin{equation}
  \text{Site}(f,w) = \sum_{i: \text{sites}} \sum_{a: \text{alleles}_i} f(w_a)
-\end{equation}\]</span> is the total summarized weights of all <em>alleles</em> at all sites,</p>
+\end{equation}\]</span> is the total summarized weights of all mutations,</p>
 </div>
 <div class="fragment">
 <p>and the <strong>Branch</strong> statistic <span class="math display">\[\begin{equation}
@@ -679,13 +648,13 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 \end{equation}\]</span> is the <em>expected value</em> of <span class="math inline">\(\text{Site}(f,w)\)</span> under Poisson(1) mutation, given the trees.</p>
 </div>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <p>With genealogies <em>fixed</em>, and averaging only over <em>mutations</em> with rate <span class="math inline">\(\mu\)</span>, <span class="math display">\[\begin{equation}
     \text{Branch}(f, w) = \frac{1}{\mu} \E\left[ \text{Site}(f, w) \vert T \right] .
 \end{equation}\]</span></p>
 <div class="fragment">
-<p>Dealing directly with genealogies can <em>remove the layer of noise due to mutation</em>: <span class="math display">\[\begin{equation}
+<p>Dealing directly with genealogies removes the layer of noise due to mutation: <span class="math display">\[\begin{equation}
     \frac{1}{\mu^2} \var\left[\text{Site}(f,w)\right]
     =
     \var\left[\text{Branch}(f,w)\right]
@@ -693,12 +662,15 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
     \frac{1}{n}
     \E\left[\text{Branch}(f^2,w)\right]
 \end{equation}\]</span></p>
+</div>
+<div class="fragment">
+<p>and might produce <em>unbiased</em> estimates from ascertained genotype data.</p>
 <div class="caption greyed floatright">
 <p>also see R., TPB, 2019</p>
 </div>
 </div>
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-13" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -732,20 +704,6 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <p>Since neutral mutations don’t affect demography,</p>
 <p>this is <em>equivalent</em> to having kept track of them throughout.</p>
 </div>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="caption">
-<p>From Kelleher, Thornton, Ashander, and Ralph 2018, <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006581">Efficient pedigree recording for fast population genetics simulation</a>.</p>
-<p>and Haller, Galloway, Kelleher, Messer, and Ralph 2018, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12968"><em>Tree‐sequence recording in SLiM opens new horizons for forward‐time simulation of whole genomes</em></a></p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="floatright">
-<p><img data-src="figs/jared.jpeg" style="width:35.0%" alt="jared galloway" /> <img data-src="figs/jaime.jpg" style="width:30.0%" alt="jaime ashander" /> <img data-src="figs/ben-haller.jpg" style="width:30.0%" alt="ben haller" /></p>
-</div>
-</div>
-</div>
-</div>
 </section>
 <section class="slide level2">
 
@@ -756,10 +714,20 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <div class="fragment">
 <p>But, with a few tricks…</p>
 </div>
-</section>
-<section id="section-17" class="slide level2">
-<h2></h2>
-<p>The key idea: simplify</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="caption">
+<p>From Kelleher, Thornton, Ashander, and R. 2018, <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006581">Efficient pedigree recording for fast population genetics simulation</a>.</p>
+<p>and Haller, Galloway, Kelleher, Messer, and R. 2018, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12968"><em>Tree‐sequence recording in SLiM opens new horizons for forward‐time simulation of whole genomes</em></a></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="floatright">
+<p><img data-src="figs/jared.jpeg" style="width:35.0%" alt="jared galloway" /> <img data-src="figs/jaime.jpg" style="width:30.0%" alt="jaime ashander" /> <img data-src="figs/ben-haller.jpg" style="width:30.0%" alt="ben haller" /></p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="a-100x-speedup" class="slide level2">
 <h2>A 100x speedup!</h2>
@@ -776,15 +744,6 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 </div>
 </div>
 </div>
-</section>
-<section id="what-else-can-you-do-with-tree-sequences" class="slide level2">
-<h2>What else can you do with tree sequences?</h2>
-<ul>
-<li class="fragment">recorded pedigree and migration history</li>
-<li class="fragment">true ancestry assignment</li>
-<li class="fragment"><em>recapitation</em>: fast, post-hoc initialization with coalescent simulation</li>
-<li class="fragment">fast, convenient computation</li>
-</ul>
 </section>
 <section class="slide level2">
 
@@ -804,10 +763,10 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <h1>Example: predicting location</h1>
 <p><img data-src="figs/spatial_pedigree.png" /></p>
 <div class="caption">
-<p>from <a href="https://arxiv.org/abs/1904.09847">Bradburd &amp; Ralph 2019</a></p>
+<p>from <a href="https://arxiv.org/abs/1904.09847">Bradburd &amp; R. 2019</a></p>
 </div>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-14" class="slide level2">
 <h2></h2>
 <div class="centered">
 <p><img data-src="figs/locator_methods.png" /></p>
@@ -818,7 +777,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 <h2>locator (<a href="https://elifesciences.org/articles/54507">Battey et al 2020</a>)</h2>
 <p><img data-src="figs/locator_results.png" /></p>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-15" class="slide level2">
 <h2></h2>
 <p><img data-src="figs/locator_spatial_tree_sequence.png" /></p>
 <div class="flushright">
@@ -943,7 +902,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2" data-background-image="figs/guillemots_thanks.png" data-background-position="center" data-background-size="50%">
+<section id="section-16" class="slide level2" data-background-image="figs/guillemots_thanks.png" data-background-position="center" data-background-size="50%">
 <h2 data-background-image="figs/guillemots_thanks.png" data-background-position="center" data-background-size="50%"></h2>
 </section></section>
     </div>
